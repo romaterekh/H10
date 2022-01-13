@@ -1,0 +1,45 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using H10;
+
+namespace TriangleMethodsTest
+{
+    [TestClass]
+    public class TriangleMethodsTest
+    {
+        Triangle Test = new Triangle(new Point(12, 34), new Point(56, 78), new Point(90, 12));
+        [TestMethod]
+        public void Distance_12,34and56,78_return62.22539674441618()
+        {
+            //arrenge
+            Point a = new Point(12, 34);
+            Point b = new Point(56, 78);
+            double expected = 62.22539674441618;
+            //actual
+            double actual = Test.Distance(a, b);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Perimeter_Test_return217.51143987491776()
+        {
+            //arrenge
+            double expected = 217.51143987491776;
+            //actual
+            double actual = Test.Perimeter();
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        
+        [TestMethod]
+        public void Area_Test_return2199.9999999999995()
+        {
+            //arrenge
+            double expected = 2199.9999999999995;
+            //actual
+            double actual = Test.Area();
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+    }
+}
